@@ -1,0 +1,45 @@
+<!-- Nama : Rahel N Pangaribuan
+     NIM : 11323049
+     Nama Program : Implementasi Props
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React JS uhuuu</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+      function MyApp() {
+        return <h1>Hello, world! Congrats this ur 1st React App</h1>;
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      
+      function Header(props) {
+        return (<h1>Belajar React yang Asik dengan {props.name} </h1>);
+      }
+
+      function HomePage() {
+        return(
+          <>
+          <Header name="Rahel" />
+          <Header name="tp boongg" />
+          </>
+        );
+      }
+
+      root.render(<HomePage />);
+
+    </script>
+
+  </body>
+</html>
